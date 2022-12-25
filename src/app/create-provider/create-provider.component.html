@@ -1,0 +1,178 @@
+
+
+
+<div class="accordion" id="accordionExample">
+    <div class="accordion-item">
+      <h2 class="accordion-header" id="headingOne">
+        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+          Basic Details
+        </button>
+      </h2>
+      <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+        <div class="accordion-body">
+            <div style=" text-align:center" class="card-body container">
+                <h2 class="mb-6">Create Provider Form</h2>
+                <form style="margin-left:17% ;" class="form-horizontal" action="/action_page.php">
+                     <!-- Basic Details-->
+                     <div >
+                        <div class="form-group">
+                            <label class="control-label col-sm-2" for="providerName">Provider Name:</label>
+                            <div class="col-sm-6">
+                              <input type="text" class="form-control" id="providerName" placeholder="Enter Provider Name" name="providerName">
+                            </div>
+                          </div>
+                          <div class="form-group">
+                            <label class="control-label col-sm-2" for="displayName">Provider Display Name:</label>
+                            <div class="col-sm-6">
+                              <input type="text" class="form-control" id="displayName" placeholder="Enter Provider Display Name" name="displayName">
+                            </div>
+                          </div>
+                          <div class="form-group">
+                            <label class="control-label col-sm-2" for="description">Description:</label>
+                            <div class="col-sm-6">          
+                              <input type="text" class="form-control" id="description" placeholder="Enter description" name="description">
+                            </div>
+                          </div>
+                      
+                          <div class="form-group">
+                            <label class="control-label col-sm-2" for="logoSmall">Logo Small:</label>
+                            <div class="col-sm-6">  
+                               <input style="color:transparent;" onchange="this.style.color = 'black';" type="file"
+                                      (change)="onImageChange($event)" #bannerPhoto />
+                            </div>
+                          </div>
+                          <div class="form-group">
+                            <label class="control-label col-sm-2" for="logoSmall">Logo Large:</label>
+                            <div class="col-sm-6">          
+                                <input style="color:transparent;" onchange="this.style.color = 'black';" type="file"
+                                (change)="onImageChange($event)" #bannerPhoto />
+                            </div>
+                          </div>
+                     </div>
+                  
+                  
+                      
+            
+                  <div class="ml-2 form-group row">        
+                    <div class="col-sm-offset-2 col-sm-1">
+                      <button (click) = "saveAndNext()" type="submit" class="btn btn-primary">Save & Next</button>
+                      
+                    </div>
+                    <div class="col-sm-1">
+                        
+                        <button type="submit" class="btn btn-primary">Submit</button>
+                      </div>
+                  </div>
+                </form>
+              </div>
+        </div>
+      </div>
+    </div>
+    <div class="accordion-item">
+      <h2 class="accordion-header" id="headingTwo">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+          Collaborator
+        </button>
+      </h2>
+      <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+        <div class="accordion-body">
+            <div style=" text-align:center" class="card-body container">
+                <h2 class="mb-6">Create Provider Form</h2>
+                <form style="margin-left:17% ;" class="form-horizontal" action="/action_page.php">
+                   
+                  
+                  
+                      <!-- Collaborator Details-->
+                      <div >
+                        <div class="form-group">
+                            <label class="control-label col-sm-2" for="label">Label:</label>
+                            <div class="col-sm-6">
+                              <input type="text" class="form-control" id="label" placeholder="Enter Label" name="label">
+                            </div>
+                          </div>
+                          <div class="form-group">
+                            <label class="control-label col-sm-2" for="text">Text:</label>
+                            <div class="col-sm-6">
+                              <input type="text" class="form-control" id="text" placeholder="Enter Provider text" name="text">
+                            </div>
+                          </div>
+                          <div class="form-group">
+                            <label class="control-label col-sm-2" for="hyperlink">Hyperlink:</label>
+                            <div class="col-sm-6">          
+                              <input type="text" class="form-control" id="hyperlink" placeholder="Enter hyperlink" name="hyperlink">
+                            </div>
+                          </div>
+                          <div class="form-group">
+                            <label class="control-label col-sm-2" for="providerName">Logo:</label>
+                            <div class="col-sm-6">  
+                                <input style="color:transparent;" onchange="this.style.color = 'black';" type="file"
+                                       (change)="onImageChange($event)" #bannerPhoto />
+                                 </div>
+                          </div>
+                          <div class="form-group">
+                            <label class="control-label col-sm-2" for="website">Website:</label>
+                            <div class="col-sm-6">
+                              <input type="text" class="form-control" id="website" placeholder="Enter Provider website " name="website">
+                            </div>
+                          </div>
+                          <div class="form-group">
+                            <label class="control-label col-sm-2" for="primaryEmail">Primary Email:</label>
+                            <div class="col-sm-6">          
+                              <input type="text" class="form-control" id="primaryEmail" placeholder="Enter primaryEmail" name="primaryEmail">
+                            </div>
+                          </div>
+                          <div class="form-group">
+                            <label class="control-label col-sm-2" for="secondaryEmail">Secondary Email:</label>
+                            <div class="col-sm-6">
+                              <input type="text" class="form-control" id="secondaryEmail" placeholder="Enter secondaryEmail" name="secondaryEmail">
+                            </div>
+                          </div>
+                          <div class="form-group">
+                            <label class="control-label col-sm-2" for="phoneNumber">Phone Number:</label>
+                            <div class="col-sm-6">
+                              <input type="text" class="form-control" id="phoneNumber" placeholder="Enter Provider phoneNumber" name="phoneNumber">
+                            </div>
+                          </div>
+                          <div class="form-group">
+                            <label class="control-label col-sm-2" for="phoneLabel">Phone Label:</label>
+                            <div class="col-sm-6">          
+                              <input type="text" class="form-control" id="phoneLabel" placeholder="Enter phoneLabel" name="phoneLabel">
+                            </div>
+                          </div>
+                      </div>
+                  
+                      
+                      
+                      <!-- Collaborator Details End-->
+            
+                  <div class="ml-2 form-group row">        
+                    <div class="col-sm-offset-2 col-sm-1">
+                      <button (click) = "saveAndNext()" type="submit" class="btn btn-primary">Save & Next</button>
+                      
+                    </div>
+                    <div class="col-sm-1">
+                        
+                        <button type="submit" class="btn btn-primary">Submit</button>
+                      </div>
+                  </div>
+                </form>
+              </div>
+        </div>
+      </div>
+    </div>
+    <div class="accordion-item">
+      <h2 class="accordion-header" id="headingThree">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+          Layout Wise Config
+        </button>
+      </h2>
+      <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+        <div class="accordion-body">
+          <strong>This is the third item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+        </div>
+      </div>
+    </div>
+  </div>
+
+  
+  

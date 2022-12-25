@@ -17,6 +17,7 @@ export class HomeComponent implements OnInit {
   constructor(private fileUploadService: FileUploadService) { }
 
   ngOnInit(): void {
+    console.log("here")
   }
 
   // On file Select
